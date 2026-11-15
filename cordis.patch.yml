@@ -1,0 +1,6 @@
+# dsh-novel-archive bundle patch — one Host-only row. The agent-facing tools
+# (novel_archive_extract / _search / _assemble) are registered by index.js.
+- insert:
+    - id: novel-archive
+      name: dsh-novel-archive
+      config: {}

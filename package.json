@@ -1,0 +1,41 @@
+{
+  "name": "dsh-novel-archive",
+  "version": "0.7.0",
+  "private": true,
+  "description": "Turn a DeepSeek share link into a modular knowledge base in a work folder — plot chapters, both characters (AI may append to its own), events, timeline, worldview, scene sheets, rules split by source, emotion/voice samples, rolling memory — then continue in one click with the character kept in voice and in thought.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json",
+    "./client": "./client.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "docs",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
